@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Syne:wght@400;700;800&display=swap');
+
+
+* {
+    margin-left: 0;
+    margin-right: 0;
+    list-style: none;
+    padding: 0px;
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #FDFBF7;
+    --text-main: #333333;
+    --text-secondary: #666666;
+    --text-muted: #888888;
+    --primary-color: #6A6E5F;
+    /* Olive/Sage Green for Headings */
+    --accent-color: #9DA893;
+    /* Sage/Olive Green for Buttons */
+    --accent-hover: #838F7A;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-main);
+}
+
+html,
+body {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px !important;
+    background: transparent !important;
+    display: none !important;
+}
+
+* {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    color: #111;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+    /* Increased padding */
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-family: 'Syne', sans-serif;
+    /* Unique architectural font */
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    /* Tighter for logo feel */
+    text-transform: uppercase;
+    margin-right: auto;
+    /* Push everything else to the right */
+}
+
+.menu-toggle {
+
+    /* Hidden by default on desktop */
+    cursor: pointer;
+    margin-right: 50%;
+    color: #333;
+    /* Space from logo */
+
+    /* Thin lines */
+}
+
+.nav-links {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    /* Wide spacing */
+    align-items: center;
+}
+
+.nav-links li {
+    font-size: 11px;
+    /* Small minimal text */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.nav2 {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    margin-left: 40px;
+}
+
+.nav2 a {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    text-decoration: none;
+    color: inherit;
+
+    padding-right: 40px;
+}
+
+/* Products Header & Search */
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-form {
+    margin-right: 50px;
+    /* Align with right side padding */
+}
+
+.search-input {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 13px;
+    color: #333;
+    outline: none;
+    width: 180px;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.search-input:focus {
+    border-bottom-color: #333;
+    width: 220px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.product-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.product-item:has(p) {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+/* Grid Layout for Products */
+.products-images {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.products-images a {
+    display: block;
+    width: 100%;
+}
+
+.products-images img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.products-images a:hover img {
+    opacity: 0.8;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 80px 40px 30px;
+    margin-top: 60px;
+}
+
+.footer * {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.footer-top h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #333;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.footer-col p,
+.footer-col a {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.footer-col a:hover {
+    opacity: 0.7;
+}
+
+.social-links li {
+    margin-bottom: 12px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer-links a {
+    margin-right: 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+}
+
+
+/* Login Page */
+
+/* Login Page Specific Styles */
+.login-page {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    /* Clean light background like the reference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 28px;
+    color: #ccc;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-logo {
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-form .input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-bottom: 1px solid #EEE;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+    border-radius: 0;
+}
+
+.login-form input:focus {
+    border-bottom-color: #333;
+}
+
+.login-form input::placeholder {
+    color: #ddd;
+}
+
+.forgot-link {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    color: #AAA;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.forgot-link:hover {
+    color: #666;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 45px;
+    font-size: 12px;
+    color: #888;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #333;
+    border-color: #333;
+}
+
+.checkbox-container input:checked~.checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.social-login {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-login:hover {
+    color: #333;
+}
+
+.btn-login {
+    background-color: #2F2F2F;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 45px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.btn-login:hover {
+    background-color: #111;
+    transform: translateY(-1px);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination a.active {
+    background-color: #111;
+    color: #fff;
+}
+
+.pagination svg {
+    display: block;
+}

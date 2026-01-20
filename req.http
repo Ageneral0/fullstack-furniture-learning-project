@@ -1,0 +1,1 @@
+GET  http://localhost:3001/search?q=chair&page=1

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - HIKONE</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="login-page">
+    <div class="login-wrapper">
+        <a href="/" class="login-close" style="text-decoration: none;">×</a>
+
+        <div class="login-container">
+            <div class="logo login-logo">HIKONE</div>
+
+            <form action="/register" method="POST" class="login-form">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="form-actions" style="justify-content: center;">
+                    <a href="/login" class="social-login">Already have an account? Login</a>
+                </div>
+
+                <button type="submit" class="btn-login">Register</button>
+            </form>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    fetch("/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+    }).then(response => {
+        if (!response.ok) {
+            console.log("Registration fail")
+        }
+    });
+
+
+</script>
+
+</html>
