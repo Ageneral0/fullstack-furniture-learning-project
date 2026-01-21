@@ -53,8 +53,9 @@ const getFilter = async (req, res) => {
     }
 };
 
-const getShop = (req, res) => {
+const getShop = async (req, res) => {
     res.render('Web_Furniture.ejs');
+
 };
 
 const getProductIndepth = (req, res) => {
@@ -68,3 +69,18 @@ module.exports = {
     getShop,
     getProductIndepth
 };
+
+
+
+
+
+//DEBUGING
+
+async function gettProducts() {
+    const products = await pool.query("SELECT * FROM products");
+    console.log(products);
+}
+
+gettProducts();
+
+
