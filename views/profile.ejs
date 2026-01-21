@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile - HIKONE</title>
 
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/home.css">
 </head>
 
 <body>
@@ -45,68 +46,8 @@
         </div>
     </header>
 
-    <main>
-        <div class="products-header">
-            <nav>
-                <ul class="nav2">
-                    <li><a href="/products">All Products</a></li>
-                    <li><a href="/products?category=Tables">Tables</a></li>
-                    <li><a href="/products?category=Chair">Chair</a></li>
-                    <li><a href="/products?category=Lamp">Lamp</a></li>
-                </ul>
-            </nav>
-            <form action="/search" method="GET" class="search-form">
-                <input type="text" name="q" placeholder="Search products..." class="search-input">
-            </form>
-        </div>
-
-        <div class="products-grid">
-            <% if (products.length===0) { %>
-                <p>No products found</p>
-                <% } else { %>
-                    <div class="products-images">
-                        <% products.forEach(product=> { %>
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <a href="#"> <img src="<%= product.image_url %>" alt="<%= product.name %>" /> </a>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-name">
-                                        <p>
-                                            <%= product.name %>
-                                        </p>
-                                    </div>
-                                    <div class="product-price">
-                                        <p>
-                                            <%= product.price %>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <% }) %>
-                    </div>
-        </div>
-
-        <div class="pagination">
-            <a href="#" class="prev-arrow">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M15 18l-6-6 6-6" />
-                </svg>
-            </a>
-            <% for (let i=1; i <=totalPages; i++) { %>
-                <a href="/search?q=<%= query %>&page=<%= i %>" class="page-num active">
-                    <%= i %>
-                </a>
-                <% } %>
-                    <a href="#" class="next-arrow">
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M9 18l6-6-6-6" />
-                        </svg>
-                    </a>
-        </div>
-        <% } %>
+    <main style="padding: 100px 20px; min-height: 60vh;">
+        <h1>Welcome user</h1>
     </main>
 
     <footer class="footer">
@@ -157,11 +98,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        addEventListener(click, () => {
-
-        })
-    </script>
 </body>
 
 </html>
